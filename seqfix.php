@@ -46,14 +46,15 @@ if ($handle = opendir('.'))  {
       $ip=$parts[4];
       $prefile=$coll."_".$vol."_".$yr."_";
       print "prefile = $prefile \n";
-      break;
+      //break;
     }
   }// end while
 }//end if
 print "finished detecting name -- $prefile\n\n";
 //start looking for existing files
 //$numfiles=exec('ls -1 | wc -l');
-$numfiles=100;
+$numfiles= ($pg*1)+1;
+//$numfiles=100;
 print "numfiles = $numfiles \n";
 // sequence number
 $new=1;
